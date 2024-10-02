@@ -11,34 +11,68 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
 
+          /* 타이틀 섹션의 스타일 */
+        .mytitle {
+            height: 250px;
+            color: white;
+            background-color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* 네비게이션 섹션의 배경색 설정 */
+        .mycolor {
+            background-color: rgb(207, 102, 102);
+        }
+
+      /* 네비게이션 링크 스타일 */
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        /* 카드 스타일 */
         .card {
             background-color: white;
+            width: 180px;
             font-size: medium;
             border-style: solid;
             border-radius: 20px;
             border-width: 3px;
-            border-color: rgb(64, 4, 18);
+            border-color: rgb(140, 80, 80);
             color: black;
-            margin : auto;
-            box-shadow: 5px, 5px, 10px, gray;
+            margin: auto;
+            box-shadow: 5px 5px 10px gray;
         }
 
-        .btn-primary{
+        /* 저장 버튼 스타일 */
+        .btn-primary {
             background-color: white;
             color: black;
             border-radius: 20px;
             border-width: 3px;
-            border-color: black;
+            border-color: rgb(140, 80, 80);
             box-shadow: 5px, 5px, gray;
-            margin : 3px
+            margin: 3px
         }
 
+        /* 닫기 버튼 스타일 */
         .btn-secondary {
             color: black;
             background-color: white;
-            margin : 3px
+            margin: 3px
         }
 
+        /* 모당 창 스타일 */
         .modal-content {
             background-color: white;
             color: black;
@@ -46,6 +80,15 @@
             border-width: 5px;
             border-color: pink;
             box-shadow: 5px, 5px, gray;
+        }
+
+        /* 멤버 추가 버튼을 페이지 하단 중앙에 고정시키는 스타일 */
+        .add-member-btn {
+            position: fixed;
+            left: 50%;
+            bottom: 20px; /* 버튼이 아래서 20px 떨어지도록 설정 */
+            transform: translateX(-50%); /* 버튼이 수평 중앙에 배치 */
+            z-index: 1000; /* 버튼이 다른 요소들 위에 표시되도록 설정 */
         }
 
     </style>
@@ -77,7 +120,7 @@
             let style = $('#style').val();
             let goodat = $('#goodat').val();
             let badat = $('#badat').val();
-
+ 
             let doc = {
                 'image': image,
                 'name': name,
@@ -85,10 +128,10 @@
                 'hobby': hobby,
                 'coder': coder,
                 'github': github,
-                'blog' : blog,
-                'style' : style,
-                'goodat' : goodat,
-                'badat' : badat
+                'blog': blog,
+                'style': style,
+                'goodat': goodat,
+                'badat': badat
             };
 
             await addDoc(collection(db, "members"), doc);
@@ -110,7 +153,8 @@
             let style = row['style'];
             let goodat = row['goodat'];
             let badat = row['badat'];
-
+            
+            //HTML로 멤버와 카드와 모달 추가 
             let temp_html =
                 `<div class="membercard">
                     <div class="card">
@@ -120,9 +164,9 @@
                             <p class="card-text">취미: ${hobby}</p>
                             <p class="card-text">MBTI: ${mbti}</p>
                             <p class="card-text">어떤 개발자가 되고 싶은가: ${coder}</p>
-                            <p class="card-text">장접: ${goodat}</p>
+                            <p class="card-text">장점: ${goodat}</p>
                             <p class="card-text">단점: ${badat}</p>
-                            <p class="card-text">협업 스티알: ${style}}</p>
+                            <p class="card-text">협업 스타일: ${style}</p>
                             <p class="card-text">blog: <a href="${blog}" target="_blank">${github}</a></p>
                             <p class="card-text">Github: <a href="${github}" target="_blank">${github}</a></p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${index}">상세 보기</button>
@@ -162,15 +206,37 @@
 </head>
 
 <body>
+     <!-- 타이틀 영역 -->
+    <div class="mytitle">
+        <h1>unRanked</h1>
+    </div>
+
+     <!-- 네비게이션 바 -->
+    <div class="mycolor">
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="home.html" class="nav-link" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="addmember.html" class="nav-link">Member</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+            </header>
+        </div>
+    </div>
+
+
+       <!-- 메인 콘텐츠 영역 -->
     <div class="container">
         <div id="memberbox"></div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+        <!-- 멤버 추가 모달을 여는 버튼 -->
+        <button type="button" class="btn btn-primary add-member-btn" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
             멤버 추가하기
         </button>
 
-        <!-- Modal for adding new members -->
+       <!-- 멤버 추가 모달 -->
         <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -181,6 +247,8 @@
                     </div>
                     <div class="modal-body">
                         <div id="form-container">
+
+                             <!-- 멤버 추가를 위한 입력 폼 -->
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="image" placeholder="사진 URL">
                                 <label for="image">사진 URL</label>
@@ -231,7 +299,7 @@
             </div>
         </div>
 
-        <!-- 멤버 카드가 동적으로 추가될 영역 -->
+          <!-- 동적으로 생성된 멤버 카드가 추가될 영역 -->
         <div id="member-card" class="row row-cols-1 row-cols-md-4 g-4"></div>
     </div>
 </body>
