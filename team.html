@@ -11,18 +11,44 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script>
+        function toggleBtnMainImg() {
+
+            
+            const btn = document.getElementById('btnI');
+
+            const html = '&#9660; 이미지펼치기';
+            const html2 = '&#9650; 이미지접기';
+
+            
+            if (mainImg.style.display !== 'none') {
+                
+                mainImg.style.display = 'none';
+                btn.innerHTML =html;
+            }
+            
+            else {
+                mainImg.style.display = 'block';
+                btn.innerHTML = html2;
+                
+
+            }
+        }
+
+
+
+
+
         function toggleBtn1() {
 
             // 토글 할 버튼 선택 (btn1)
             const btn1 = document.getElementById('btn1');
 
-            // btn1 보이기
+            // 특징 보이기
             if (btn1.style.visibility !== 'visible') {
                 btn1.style.visibility = 'visible';
-                img1.style.visibility = 'visible';
-                mainImg.style.display='none';
+                img1.style.visibility = 'visible'; // 이미지도 같이 보여지게해준다
             }
-            // btn` 숨기기 
+            // 특징 숨기기 
             else {
                 btn1.style.visibility = 'hidden';
                 img1.style.visibility = 'hidden';
@@ -31,15 +57,15 @@
         }
         function toggleBtn2() {
 
-            // 토글 할 버튼 선택 (btn1)
+            // 토글 할 버튼 선택 (btn2)
             const btn2 = document.getElementById('btn2');
 
-            // btn1 보이기
+            // goal보이기
             if (btn2.style.visibility !== 'visible') {
                 btn2.style.visibility = 'visible';
                 img2.style.visibility = 'visible';
             }
-            // btn` 숨기기 
+            // goal 숨기기 
             else {
                 btn2.style.visibility = 'hidden';
                 img2.style.visibility = 'hidden';
@@ -48,15 +74,15 @@
         }
         function toggleBtn3() {
 
-            // 토글 할 버튼 선택 (btn1)
+            // 토글 할 버튼 선택 (btn3)
             const btn3 = document.getElementById('btn3');
 
-            // btn1 보이기
+            // rules 보이기
             if (btn3.style.visibility !== 'visible') {
                 btn3.style.visibility = 'visible';
                 img3.style.visibility = 'visible';
             }
-            // btn` 숨기기 
+            // rules 숨기기 
             else {
                 btn3.style.visibility = 'hidden';
                 img3.style.visibility = 'hidden';
@@ -66,30 +92,40 @@
     </script>
     <title>Team</title>
     <style>
-        body {
-            /* 배경이미지 임시 */
-            background-image: url('');
+        /*구글폰트 import*/
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100..900&display=swap');
 
+        /*구글폰트 black-han-sans*/
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /*구글폰트 dongle*/
+        * {
+            font-family: "Dongle", sans-serif;
+            font-weight: 700;
+            font-style: normal;
         }
 
         .mytitle {
             height: 250px;
-            color: white;
-            background-color: black;
+            color: rgb(0, 38, 255);
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
 
-            background-image: url('...');
+            /*헤더부분 이미지 url */
+            background-image: url('https://i.namu.wiki/i/p6PDy5LedwuztSR-widSFDLl8MzzLQvG99hA_BI50jjt5E6ua3LKUVC9XxvzM4F0c1fotEnKXCaGe4i2gcrGGmAQyoBeVrqt2PGTCvGYD4nVPpKx6HteCTMSdYqMODUIszDUV5xdCvY9BWwiPMKOpQ.webp');
             background-position: center;
-            background-size: cover;
         }
 
-        .mycolor {
-            background-color: rgb(207, 102, 102);
-            height: 100px;
+        .mynavbar {
+            background-color: rgb(0, 0, 0);
         }
 
         .nav-link {
@@ -97,38 +133,38 @@
             padding: .5rem 1rem;
             color: #fff;
             text-decoration: none;
-
-
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            font-family: "Gothic A1", sans-serif;
+            font-weight: 1000;
+            font-style: normal;
+            margin-left: 50px;
         }
 
-        .nav-item {
-            margin-left: 70px;
-            margin-bottom: 10px;
-            font-size: 25px;
-
+        .myimg {
+            border-radius: 10px 10px 10px 10px;
         }
 
-        .nav-item:hover {
-            color: black;
-            font-weight: bold;
-        }
-
-        .nav-link:hover {
-            color: black;
-
+        .notion {
+            margin-left: 610px;
+            margin-top: 3px;
+            margin-bottom: 50px;
+            width: 40px;
+            height: 40px;
         }
 
 
-
+        /*  본문 css */
 
         .ruleList {
             counter-reset: li;
             margin: 40px;
             padding: 0;
-            
+
         }
 
-        .rule ,.rule2, .rule3{
+        .rule,
+        .rule2,
+        .rule3 {
             list-style: none;
             position: relative;
             margin: 0 0 16px 2em;
@@ -136,14 +172,17 @@
             background: rgba(221, 122, 129, 0.1);
         }
 
-        .rule2{
+        .rule2 {
             background: rgba(206, 231, 136, 0.1);
         }
-        .rule3{
+
+        .rule3 {
             background: rgba(138, 128, 233, 0.1);
         }
 
-        .rule:before,.rule2:before,.rule3:before {
+        .rule:before,
+        .rule2:before,
+        .rule3:before {
             content: counter(li);
             counter-increment: li;
             position: absolute;
@@ -152,24 +191,27 @@
             box-sizing: border-box;
             width: 2em;
             margin-right: 8px;
-            
+
             font-weight: bold;
-            
+
             font-size: 30px;
             text-align: center;
         }
-        .rule:before{
+
+        .rule:before {
             color: rgb(76, 65, 237);
         }
 
-        .rule2:before{
+        .rule2:before {
             color: rgb(52, 201, 22);
         }
 
-        .rule3:before{
+        .rule3:before {
             color: rgba(237, 65, 87, 1.00);
         }
 
+
+        /* 클릭전까지 숨겨주는 css*/
 
         #btn1,
         #btn2,
@@ -177,6 +219,7 @@
             visibility: hidden;
 
         }
+
         #img1,
         #img2,
         #img3 {
@@ -194,50 +237,64 @@
             background-color: white;
             border: none;
         }
-        #mainImg img{
-            width:100%;
-            height:500px;
+
+        #mainImg img {
+            width: 100%;
+            height: 500px;
         }
-        #mainImg{
-            width:850px;
+
+        #mainImg {
+            display: block;
+            width: 850px;
         }
-        img{
-            margin-top:50px;
+
+        #img2,
+        #img3 {
+            margin-top: 200px;
+
         }
-        
-        
+
+        .mt-5 {
+            font-size: 30px;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="header">
-
-        <div class="mytitle">
-            <h1>민석님을 보신분</h1>
+    <div class="mytitle">
+        <div class="notion">
+            <a href="https://www.notion.so/teamsparta/17-unranked-1112dc3ef514811f95fcd19ac480f795" target="blank">
+                <IMG class="notion"
+                    src="data:image/png;base64,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">
+            </a>
         </div>
-        <div class="mycolor">
-            <div class="container">
-                <header class="d-flex justify-content-center py-3">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="home.html" class="nav-link" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="addmember.html" class="nav-link">Member</a></li>
-                        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-                    </ul>
-                </header>
-            </div>
+        <div>
+            <h1 class="black-han-sans-regular">unranked</h1>
         </div>
-
+    </div>
+    <div class="mynavbar">
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="home.html" class="nav-link" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="addmember.html" class="nav-link">Member</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact us</a></li>
+                </ul>
+            </header>
+        </div>
     </div>
 
-
+    <!--헤더와 바디 경계선 -------------------------------------------------------------------------------------------------------------------->
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 lefti">
 
-                <div id="mainImg">
-                    <img src="1111.png" alt="설명 이미지"
-                        class="img-fluid rounded">
+                <div>
+                    <h3 class="text-center mb-4"><button id='btnI' onclick="toggleBtnMainImg()">&#9660; 이미지접기</button></h1>
+                    <img id='mainImg'src="1111.png" alt="설명 이미지" class="img-fluid rounded">
                 </div>
 
                 <div id="img1">
@@ -249,8 +306,8 @@
                         class="img-fluid rounded">
                 </div>
                 <div id="img3">
-                    <img src="https://actcounsellingandcbtservices.co.uk/wp-content/uploads/2016/02/Rules-BI1.jpg" alt="설명 이미지"
-                        class="img-fluid rounded">
+                    <img src="https://actcounsellingandcbtservices.co.uk/wp-content/uploads/2016/02/Rules-BI1.jpg"
+                        alt="설명 이미지" class="img-fluid rounded">
                 </div>
             </div>
 
@@ -262,7 +319,7 @@
                             <li class="rule3">- 열정이 넘친다 !!</li>
                             <li class="rule3">- 효율성을 중시!!! </li>
                             <li class="rule3">- 저희는 공부할때는 공부하고 쉴때는 쉬자는 마인드를 가지고 있습니다! </li>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
                 <div class="d1">
@@ -273,7 +330,7 @@
                             <li class="rule2">- <b>효율성</b>을 극대화 하자 !!</li>
                             <li class="rule2">- 짧은 시간내에 <b>좋은 결과물</b>을 만들자 !!</li>
                             <li class="rule2">- 무엇이든 <b>원하는</b> 대로 만들 수 있게하자 !!</li>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
                 <div class="d1">
