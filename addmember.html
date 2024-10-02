@@ -83,6 +83,8 @@
             color: black;
             margin: 10px;
             box-shadow: 5px 5px 10px gray;
+            display: flex;
+            justify-content: center;
         }
 
         .card-body p.card-text {
@@ -98,6 +100,15 @@
             gap: 20px;
             /* 카드 간의 간격 */
 
+        }
+
+
+        /* row-cols 스타일 */
+        #member-card.row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
         }
 
         /* 저장 버튼 스타일 */
@@ -151,14 +162,6 @@
             border-radius: 20px;
         }
 
-
-        /* row-cols 스타일 */
-        #member-card.row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
     </style>
 
     <script type="module">
