@@ -28,7 +28,7 @@
 
 -> 폼 제출 이벤트를 직접 등록 
 
--> onsubmit을 사용하지 않고 JavaScript에서 DOM 로드 후 이벤트 처리 하도록 변경 
+-> onsubmit을 사용하지 않고 JavaScript에서 DOM 로드 후 이벤트 처리 하도록 변경 (왜 안되었는지 정확히 이해하지는 못함)
 
 +a) DOM - document object Model (웹 브라우저가 HTML 페이지를 인식하는 방식) 
 
