@@ -8,22 +8,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+        /*구글폰트 import*/
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        /*구글폰트 black-han-sans*/
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /*구글폰트 dongle*/
+        * {
+            font-family: "Dongle", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
         .mytitle {
             height: 250px;
-            color: white;
+            color: rgb(0, 38, 255);
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
 
             /*헤더부분 이미지 url */
             background-image: url('https://i.namu.wiki/i/p6PDy5LedwuztSR-widSFDLl8MzzLQvG99hA_BI50jjt5E6ua3LKUVC9XxvzM4F0c1fotEnKXCaGe4i2gcrGGmAQyoBeVrqt2PGTCvGYD4nVPpKx6HteCTMSdYqMODUIszDUV5xdCvY9BWwiPMKOpQ.webp');
             background-position: center;
-            background-size: cover;
         }
 
-        .mycolor {
+        .mynavbar {
             background-color: rgb(0, 0, 0);
         }
 
@@ -33,22 +50,39 @@
             color: #fff;
             text-decoration: none;
             transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            font-family: "Gothic A1", sans-serif;
+            font-weight: 1000;
+            font-style: normal;
         }
-        .myimg{
+
+        .myimg {
             border-radius: 10px 1px 1px 1px;
+        }
+        .notion{
+            margin-left: 610px;
+            margin-top: 3px;
+            margin-bottom: 50px;
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
 
 <body>
     <div class="mytitle">
-        <h1>unranked</h1>
+        <div class="notion">
+            <a href = "https://www.notion.so/teamsparta/17-unranked-1112dc3ef514811f95fcd19ac480f795" target = "blank" >
+                <IMG class="notion" src = "data:image/png;base64,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">
+            </a>
+        </div>
+        <div>
+            <h1 class="black-han-sans-regular">unranked</h1> 
+        </div>
     </div>
-    <div class="mycolor">
+    <div class="mynavbar">
         <div class="container">
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
-
                     <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Members</a></li>
@@ -63,12 +97,14 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">팀 이름</h2>
-                <h4>이제 진정한 개발자의 시작으로 아직 값이 매겨지지 않은 숨은 보석이라는 뜻의 팀 이름을 지었습니다.</h4>
-                <h4>지금은 비록 돌덩이에 불과할지라도 실력을 깎다보면 다이아가 될 수 있을지도?</h4>
+                <h1 class="featurette-heading fw-normal lh-1">팀 이름</h1>
+                <h3>이제 진정한 개발자의 시작으로 아직 값이 매겨지지 않은 숨은 보석이라는 뜻의 팀 이름을 지었습니다.</h3>
+                <h3>지금은 비록 돌덩이에 불과할지라도 실력을 깎다보면 다이아가 될 수 있을지도?</h3>
             </div>
             <div class="col-md-5">
-                <img class="myimg" src="https://lh6.googleusercontent.com/proxy/O-vqiZE3D-1Ph7oMuHMRevMGNPn5w-KDi7WWQJzZc5TOjxRp5eyDfEGq65Ccybl0e_wu2DkyHFCncLwUzlEMuUdkWOkkmzXREqBcFRErSdckP6WriTJq_Yub3S2p3YAJIXRJ255k7JwWeH2UZd8Ba-W7JSJnG5A4mIVs32X_6w" width="500" height="500">
+                <img class="myimg"
+                    src="https://lh6.googleusercontent.com/proxy/O-vqiZE3D-1Ph7oMuHMRevMGNPn5w-KDi7WWQJzZc5TOjxRp5eyDfEGq65Ccybl0e_wu2DkyHFCncLwUzlEMuUdkWOkkmzXREqBcFRErSdckP6WriTJq_Yub3S2p3YAJIXRJ255k7JwWeH2UZd8Ba-W7JSJnG5A4mIVs32X_6w"
+                    width="500" height="500">
             </div>
         </div>
 
@@ -76,11 +112,11 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">소통</h2>
-                <h4>• ~님을 호칭으로 사용하며 서로 존중합니다.</h4>
-                <h4>• 하루에 두번 모여서 회의를 진행합니다</h4>
-                <h5>&emsp;&emsp;&emsp;9:30 -> 팀원들의 진행상황 공유 및 오늘의 할일 체크</h5>
-                <h5>&emsp;&emsp;&emsp;20:00 -> 전체 진행상황 체크 및 팀원들과 회고</h5>
+                <h1 class="featurette-heading fw-normal lh-1">소통</h1>
+                <h3>• ~님을 호칭으로 사용하며 서로 존중합니다.</h3>
+                <h3>• 하루에 두번 모여서 회의를 진행합니다</h3>
+                <h4>&emsp;&emsp;9:30 -> 팀원들의 진행상황 공유 및 오늘의 할일 체크</h4>
+                <h4>&emsp;&emsp;20:00 -> 전체 진행상황 체크 및 팀원들과 회고</h4>
             </div>
             <div class="col-md-5">
                 <img src="https://static.wanted.co.kr/images/events/3066/5391ccc8.jpg" width="500" height="500">
@@ -91,9 +127,9 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">성장</h2>
-                <h4>• 모르는 내용이 있다면 먼저 물어보지 말고 검색 후 그래도 모른다면 팀원이나 튜터님에게 물어봅니다.</h4>
-                <h4>• 피드백은 바로바로하되 피드백의 이유를 준비합니다.(어떤 방식이 왜 더 좋은지?)</h4>
+                <h1 class="featurette-heading fw-normal lh-1">성장</h1>
+                <h3>• 모르는 내용이 있다면 먼저 물어보지 말고 검색 후 그래도 모른다면 팀원이나 튜터님에게 물어봅니다.</h3>
+                <h3>• 피드백은 바로바로하되 피드백의 이유를 설명합니다.(어떤 방식이 왜 더 좋은지?)</h3>
             </div>
             <div class="col-md-5">
                 <img src="https://www.sisaon.co.kr/news/photo/202307/152114_182784_453.jpg" width="500" height="500">
