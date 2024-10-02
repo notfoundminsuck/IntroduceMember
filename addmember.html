@@ -88,6 +88,18 @@
             justify-content: center;
         }
 
+        .card img {
+            width: 100%;
+            height: 200px;
+            /* 이미지의 고정 높이 설정 (원하는 크기로 조정 가능) */
+            object-fit: cover;
+            /* 이미지가 카드 크기에 맞게 잘리거나 확장되도록 설정 */
+            border-top-left-radius: 20px;
+            /* 카드와 동일한 둥근 모서리 적용 */
+            border-top-right-radius: 20px;
+            /* 카드와 동일한 둥근 모서리 적용 */
+        }
+
         .card-body p.card-text {
             font-size: 28px;
         }
@@ -162,7 +174,6 @@
         .form-control {
             border-radius: 20px;
         }
-
     </style>
 
     <script type="module">
@@ -227,47 +238,51 @@
             let goodat = row['goodat'];
             let badat = row['badat'];
 
+            let memberId = member.id;
+
             //HTML로 멤버와 카드와 모달 추가 
             let temp_html =
                 `<div class="membercard">
-                    <div class="card">
-                        <img src="${image}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">${name}</h5>
-                            <p class="card-text">MBTI: ${mbti}</p>
-                            <p class="card-text">blog: <a href="${blog}" target="_blank">${blog}</a></p>
-                            <p class="card-text">Github: <a href="${github}" target="_blank">${github}</a></p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${index}">상세 보기</button>
-                        </div>
+            <div class="card">
+                <img src="${image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <p class="card-text">MBTI: ${mbti}</p>
+                    <p class="card-text">blog: <a href="${blog}" target="_blank">${blog}</a></p>
+                    <p class="card-text">Github: <a href="${github}" target="_blank">${github}</a></p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${memberId}">상세 보기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 -->
+        <div class="modal fade" id="modal${memberId}" tabindex="-1" aria-labelledby="modalLabel${memberId}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel${memberId}">${name}의 상세 정보</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="${image}" class="img-fluid mb-3" alt="Member Image">
+                        <p><strong>이름:</strong> ${name}</p>
+                        <p><strong>MBTI:</strong> ${mbti}</p>
+                        <p><strong>취미:</strong> ${hobby}</p>
+                        <p><strong>어떤 개발자가 되고 싶은가:</strong> ${coder}</p>
+                        <p><strong>협업 스타일:</strong> ${style}</p>
+                        <p><strong>장점:</strong> ${goodat}</p>
+                        <p><strong>단점:</strong> ${badat}</p>
+                        <p><strong>blog:</strong> <a href="${blog}" target="_blank">${blog}</a></p>
+                        <p><strong>Github:</strong> <a href="${github}" target="_blank">${github}</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                     </div>
                 </div>
+            </div>
+        </div>`;
 
-                <!-- 모달 -->
-                <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabel${index}">${name}의 상세 정보</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="${image}" class="img-fluid mb-3" alt="Member Image">
-                                <p><strong>이름:</strong> ${name}</p>
-                                <p><strong>MBTI:</strong> ${mbti}</p>
-                                <p><strong>취미:</strong> ${hobby}</p>
-                                <p><strong>어떤 개발자가 되고 싶은가:</strong> ${coder}</p>
-                                <p><strong>협업 스타일:</strong> ${style}</p>
-                                <p><strong>장점:</strong> ${goodat}</p>
-                                <p><strong>단점:</strong> ${badat}</p>
-                                <p><strong>blog:</strong> <a href="${blog}" target="_blank">${blog}</a></p>
-                                <p><strong>Github:</strong> <a href="${github}" target="_blank">${github}</a></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
+            // 해당 멤버의 HTML을 동적으로 추가
             $('#member-card').append(temp_html);
         });
     </script>
