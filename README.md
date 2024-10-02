@@ -21,10 +21,14 @@
   - 개인정보이기 때문에 db를 가져오는 부분은 따로 구현 하지 않음 
 --- 
 ## 🥵 TroubleShooting 
-1. contactus를 firebase와 연결하는 과정 중에, bootstarp version 4, 5가 Header 부분에 동시에 존재해 이부분 수정 
+1. contactus를 firebase와 연결하는 과정 중에, bootstarp version 4, 5가 Header 부분에 동시에 존재해 이부분 수정
+    
 2. onsubmit 이벤트를 HTML에 직접 호출할때 event 적용 되지 않음. + alert 문제 또한 발생 
+
 -> 폼 제출 이벤트를 직접 등록 
+
 -> onsubmit을 사용하지 않고 JavaScript에서 DOM 로드 후 이벤트 처리 하도록 변경 
+
 +a) DOM - document object Model (웹 브라우저가 HTML 페이지를 인식하는 방식) 
 
 
