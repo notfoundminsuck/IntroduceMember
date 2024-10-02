@@ -18,6 +18,38 @@
             background-image: url('https://i.pinimg.com/1200x/b0/df/95/b0df95cfc6f31293d002d4d6daac253c.jpg');
 
         }
+
+        .mytitle {
+            height: 250px;
+            color: white;
+            background-color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: url('...');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mycolor {
+            background-color: rgb(207, 102, 102);
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            color: #fff;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+
+
+
+
         .ruleList {
             counter-reset: li;
             margin: 40px;
@@ -51,7 +83,29 @@
     </style>
 </head>
 
-<body class="bg-light">
+<body>
+    <div class="header">
+
+        <div class="mytitle">
+            <h1>민석님을 보신분</h1>
+        </div>
+        <div class="mycolor">
+            <div class="container">
+                <header class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="home.html" class="nav-link" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="addmember.html" class="nav-link">Member</a></li>
+                        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    </ul>
+                </header>
+            </div>
+        </div>
+
+    </div>
+
+
 
     <div class="container mt-5">
         <div class="row">
