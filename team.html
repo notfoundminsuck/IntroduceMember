@@ -125,10 +125,10 @@
             counter-reset: li;
             margin: 40px;
             padding: 0;
-            font-family: sans-serif;
+            
         }
 
-        .rule {
+        .rule ,.rule2, .rule3{
             list-style: none;
             position: relative;
             margin: 0 0 16px 2em;
@@ -136,7 +136,14 @@
             background: rgba(221, 122, 129, 0.1);
         }
 
-        .rule:before {
+        .rule2{
+            background: rgba(206, 231, 136, 0.1);
+        }
+        .rule3{
+            background: rgba(138, 128, 233, 0.1);
+        }
+
+        .rule:before,.rule2:before,.rule3:before {
             content: counter(li);
             counter-increment: li;
             position: absolute;
@@ -145,11 +152,22 @@
             box-sizing: border-box;
             width: 2em;
             margin-right: 8px;
-            color: rgba(237, 65, 87, 1.00);
+            
             font-weight: bold;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            
             font-size: 30px;
             text-align: center;
+        }
+        .rule:before{
+            color: rgb(76, 65, 237);
+        }
+
+        .rule2:before{
+            color: rgb(52, 201, 22);
+        }
+
+        .rule3:before{
+            color: rgba(237, 65, 87, 1.00);
         }
 
 
@@ -178,11 +196,15 @@
         }
         #mainImg img{
             width:100%;
-            height:1000px;
+            height:500px;
         }
         #mainImg{
-            width: 700px;
+            width:850px;
         }
+        img{
+            margin-top:50px;
+        }
+        
         
     </style>
 </head>
@@ -236,21 +258,21 @@
                 <div class="d1">
                     <h1 class="text-center mb-4"><button onclick="toggleBtn1()">🏝️ 특징</button></h1>
                     <div id="btn1">
-                        <ul class="list-group mb-5 character">
-                            <li class="list-group-item">열정이 넘친다 !!</li>
-                            <li class="list-group-item">효율성을 중시!!! </li>
-                            <li class="list-group-item">저희는 공부할때는 공부하고 쉴때는 쉬자는 마인드를 가지고 있습니다! </li>
+                        <ol class="ruleList rules">
+                            <li class="rule3">- 열정이 넘친다 !!</li>
+                            <li class="rule3">- 효율성을 중시!!! </li>
+                            <li class="rule3">- 저희는 공부할때는 공부하고 쉴때는 쉬자는 마인드를 가지고 있습니다! </li>
                         </ul>
                     </div>
                 </div>
                 <div class="d1">
                     <h1 class="text-center mb-4"><button onclick="toggleBtn2()">🚩Goals</button></h1>
                     <div id="btn2">
-                        <ul class="list-group mb-5 goals">
-                            <li class="list-group-item">><b> 최선</b>을 다해 학습하고 성장하자 !!</li>
-                            <li class="list-group-item">> <b>효율성</b>을 극대화 하자 !!</li>
-                            <li class="list-group-item">> 짧은 시간내에 <b>좋은 결과물</b>을 만들자 !!</li>
-                            <li class="list-group-item">> 무엇이든 <b>원하는</b> 대로 만들 수 있게하자 !!</li>
+                        <ol class="ruleList rules">
+                            <li class="rule2">-<b> 최선</b>을 다해 학습하고 성장하자 !!</li>
+                            <li class="rule2">- <b>효율성</b>을 극대화 하자 !!</li>
+                            <li class="rule2">- 짧은 시간내에 <b>좋은 결과물</b>을 만들자 !!</li>
+                            <li class="rule2">- 무엇이든 <b>원하는</b> 대로 만들 수 있게하자 !!</li>
                         </ul>
                     </div>
                 </div>
@@ -258,11 +280,11 @@
                     <h2 class="text-center mb-4"><button onclick="toggleBtn3()">🕑Ground Rules</button></h2>
                     <div id="btn3">
                         <ol class="ruleList rules">
-                            <li class="rule">소통 잘하고 상처 받는 말 하지 말기.</li>
-                            <li class="rule">피드백을 요청하면 긍정/부정에 관계 없이 확실하게 답변하기.</li>
-                            <li class="rule">누구 한명이라도 모르는 것이 있으면 짚고 넘어가기.</li>
-                            <li class="rule">모르는 내용이 있다면 제일 먼저 검색 후 그래도 모른다면 튜터님 혹은 팀원에게 물어보기.</li>
-                            <li class="rule">정보 공유를 잘하기.</li>
+                            <li class="rule">- 소통 잘하고 상처 받는 말 하지 말기.</li>
+                            <li class="rule">- 피드백을 요청하면 긍정/부정에 관계 없이 확실하게 답변하기.</li>
+                            <li class="rule">- 누구 한명이라도 모르는 것이 있으면 짚고 넘어가기.</li>
+                            <li class="rule">- 모르는 내용이 있다면 제일 먼저 검색 후 그래도 모른다면 튜터님 혹은 팀원에게 물어보기.</li>
+                            <li class="rule">- 정보 공유를 잘하기.</li>
                         </ol>
                     </div>
                 </div>
