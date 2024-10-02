@@ -10,7 +10,8 @@
 ### - Home 
   - 팀 이름의 의미, Grow up 
 ### - Team 
-  - About us, Our Goals, ground Rules
+  - #### About us, Our Goals, ground Rules
+  - javascript 의 onclick function과 display block,none visivility visible,hidden 을 이용하여 사진과 글을 열거나 닫을 수 있게 구현
 ### - Member 
   ##### Modal 기능을 활용해 create와 card 클릭시 해당 정보가 나타날 수 있도록 함
   - Create : fireabase db와 연동해 member 생성시 addDocs를 통해 db에 값이 넘어오고, getDocs를 통해 MemberCard 값 나타날 수 있도록 구현
