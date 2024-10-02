@@ -24,7 +24,9 @@
 ## 🥵 TroubleShooting 
 1. contactus를 firebase와 연결하는 과정 중에, bootstarp version 4, 5가 Header 부분에 동시에 존재해 이부분 수정
     
-2. onsubmit 이벤트를 HTML에 직접 호출할때 event 적용 되지 않음. + alert 문제 또한 발생 
+2. onsubmit 이벤트를 HTML에 직접 호출할때 event 적용 되지 않음. + alert 문제 또한 발생
+ 
+<a href>https://velog.io/@ik0605/Event</a> , <a href>https://velog.io/@ik0605/onsubmit-addEventListener</a> 
 
 -> 폼 제출 이벤트를 직접 등록 
 
