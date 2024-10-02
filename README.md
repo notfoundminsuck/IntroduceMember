@@ -4,19 +4,19 @@
 
 ---
 ## Intro
-팀원들 소개 홈페이지 만들기 
+팀원들 소개 홈페이지 
 ---
 ## 🛠️ 기능 
-### Home 
+### - Home 
   - 팀 이름의 의미, Grow up 
-### Team 
+### - Team 
   - About us, Our Goals, ground Rules
-### Member 
+### - Member 
   ##### Modal 기능을 활용해 create와 card 클릭시 해당 정보가 나타날 수 있도록 함
   - Create : fireabase db와 연동해 member 생성시 addDocs를 통해 db에 값이 넘어오고, getDocs를 통해 MemberCard 값 나타날 수 있도록 구현
              생성이 완료 되면, 해당 alert를 통해 사용자가 확인 할 수 있도록 형성 
   - Card : 팀원에 대한 정보 등록 및 확인 가능
-### Contactus 
+### - Contact us 
   - email, 이름, 휴대폰 번호와 궁금한 사항을 입력해 FireBase로 넘어올 수 있게 설정 
   - 개인정보이기 때문에 db를 가져오는 부분은 따로 구현 하지 않음 
 --- 
