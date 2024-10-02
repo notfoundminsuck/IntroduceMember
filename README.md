@@ -1,6 +1,7 @@
 # 🎉IntroduceMember🎉
 ---
-## 🛠️  Tools : HTML, JQuery, firebase
+## 🛠️  Tools :<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>, <img src="https://img.shields.io/badge/Visual Studio-5C2D91?style=flat-square&logo=Visual Studio&logoColor=white"/>, <img src="https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=Firebase&logoColor=black"/>, <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=black"/> 
+
 ---
 ## Intro
 팀원들 소개 홈페이지 만들기 
