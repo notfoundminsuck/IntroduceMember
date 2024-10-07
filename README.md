@@ -48,7 +48,8 @@
 ---
 ## 🛠️ 기능 
 ### - Home 
-  - 팀 이름의 의미, Grow up 
+  - 팀 이름의 의미, Grow up
+  - 부트스트랩의 그리드 시스템을 이용하여 사진과 텍스트 정렬 배치
 ### - Team 
   - #### About us, Our Goals, ground Rules
   - javascript 의 onclick function과 display block,none visivility visible,hidden 을 이용하여 사진과 글을 열거나 닫을 수 있게 구현
