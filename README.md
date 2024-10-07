@@ -1,10 +1,50 @@
 # 🎉IntroduceMember🎉
 ---
 ## 🛠️  Tools :<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>, <img src="https://img.shields.io/badge/Visual Studio-5C2D91?style=flat-square&logo=Visual Studio&logoColor=white"/>, <img src="https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=Firebase&logoColor=black"/>, <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=black"/> 
-
 ---
-## Intro
+## 😄 Intro
 팀원들 소개 홈페이지 
+---
+## 👨‍💻 Our Role 
+- home : 한승완 (Team)
+- team : 이창현 (Team, 발표자)
+- member : 이유진 (Team)
+- member, contactUs : 황상익 (leader)
+---
+## 👨‍💻 Our Progress
+
+#### 🥅 2024/10/1 
+- 4주차까지 강의를 듣고 firebase사용해서 팀원 정보 DB에 저장하는 방식
+- MBTI, 취미, 자신이 생각하는 이상적인 개발자?, 팀의 목표(가족같은팀?, 추후 회의를 통해 결정)
+- github 주소구성-home, team, members 페이지로 구성-멤버 개인 소개 메뉴
+- 멤버 카드 클릭시 멤버 상세정보로 넘어가는 Modal 사용
+- Team → css 부분 수정 
+- Home → 틀은 git에 올린대로 / css 부분 & 소개글 
+- Member → 추가적으로 기능 구현 할 부분 있으면 추가 할 예정
+- <a>tag 로 구현 하는 부분은 수요일 구현 예정 
+- Home에 대한 네비 바 사용 (10/2)일 마무리 추후 홈 네비바 구현 코드를 갖고 나머지 코드들 추가 할 예정 
+- 네비 바 할때 (구글)폰트 맞춰서 적용
+
+#### 2024/10/02
+- 팀이름 변경 unranked → 팀이름 선정 이유 : 숨은 보석이라는 뜻
+- 팀이 추구하는 목표, 팀만의 특징 선정, 팀 노션에 개인적으로 생각하는 팀 목표 적기
+- 멤버 추가하기 버튼 → 멤버카드 밑 가운데로 옮기는게 미관상 좋을거 같다
+- 소개 페이지에 넣을 임시사진 : 찾기
+- 최종목표 : 금요일까지 pt완성, 오늘까지 페이지 모두 완성
+- Gaol : home 페이지 완성, team페이지 완성, 네비바 통일, contect us 추가, member card 오류 수정(멤버카드 생성시 카드 겹치는 것, 상세정보 표기오류), 와이어프레임 수정, ContactUs 수정
+
+#### 2024/10/04
+- 발표준비 ppt제작(시연영상찍기)
+- Todo : 각자 페이지 만든 기술적인면, 어려웠던 부분 정리해서 창현님한테 보내기
+- ppt 향후 계획 부분 추가(CRUD부분 업그레이드)
+- 시연 영상은 월요일 회의 끝난 후 제작
+
+#### 2024/10/07
+- 11시까지 제출해야될 자료 : 프로젝트 깃허브 주소, 프로젝트 설명ppt, 시연 영상
+---
+## 🔊 PT & Video 
+- 📢 PT : [[Spring 7기] 17조  .pptx](https://github.com/user-attachments/files/17271519/Spring.7.17.pptx)
+- 🎥 Video : https://www.youtube.com/watch?v=wN-fnUDYgW8
 ---
 ## 🛠️ 기능 
 ### - Home 
