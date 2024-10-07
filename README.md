@@ -11,6 +11,10 @@
 - member : 이유진 (Team)
 - member, contactUs : 황상익 (leader)
 ---
+## wireframe
+![image](https://github.com/user-attachments/assets/0b72f3ca-4c5a-48ed-a0e5-3d7846b372cd)
+
+---
 ## 👨‍💻 Our Progress 🥅
 
 #### 2024/10/1 
@@ -46,7 +50,7 @@
 - 📢 PT : [[Spring 7기] 17조  .pptx](https://github.com/user-attachments/files/17271519/Spring.7.17.pptx)
 - 🎥 Video : https://www.youtube.com/watch?v=wN-fnUDYgW8
 ---
-## 🛠️ 기능 
+## 🛠️ Tech
 ### - Home 
   - 팀 이름을 선정한 이유, 팀의 소통방식, 팀이 성장하는 방법 게시
   - 부트스트랩의 그리드 시스템을 이용하여 사진과 텍스트 정렬 배치
@@ -78,7 +82,8 @@ css 부분에선 card를 한 줄에 4개까지 생성할 수 있도록 설정했
 
 --- 
 ## After Project what we learn 
-- 황상익 : 이번에 협업 프로젝트를 처음 경험해봤다. 혼자 side Project를 작성하는 것보다 여러명이서 협업을 하니, 뒤로 처지는 부분도 없고, 내가 부족한 부분을 팀원 분들이 잘 매꿔주시고 도와주셔서 협업의 중요성을 깨달았다. 또한 프로젝트 leader를 처음 해봤고, 팀원들에게 역할 분배, 회의 주도, push를 언제 어떤 부분에서 적절히 이뤄져야 하는지 알게되는 경험이기도 했다. 
+- 황상익 : 이번에 협업 프로젝트를 처음 경험해봤다. 혼자 side Project를 작성하는 것보다 여러명이서 협업을 하니, 뒤로 처지는 부분도 없고, 내가 부족한 부분을 팀원 분들이 잘 매꿔주시고 도와주셔서 협업의 중요성을 깨달았다. 또한 프로젝트 leader를 처음 해봤고, 팀원들에게 역할 분배, 회의 주도, push를 언제 어떤 부분에서 적절히 이뤄져야 하는지 알게되는 경험이기도 했다.
+  
 - 이창현 : 목표가 뚜렷해 질 수록 방향성을 잡기 쉬워진 것 같아 협업을 통해 같은 목표를 달성하는 것이 왜 중요한 지 깨달았다.
 
   
